@@ -1,0 +1,38 @@
+{
+  "name": "multi-wallet",
+  "productName": "Multi-Wallet",
+  "version": "1.0.0",
+  "description": "Demonstrates MultiChain in an Electron Application.",
+  "main": "main.js",
+  "repository": "https://github.com/unibitproject/multi-wallet",
+  "author": "UniBit Labs",
+  "license": "Unlicense",
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "start-mac": "/Applications/Electron.app/Contents/MacOS/Electron .",
+    "test": "mocha",
+    "package-linux": "electron-packager . multi-wallet --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/unibit.png --prune=true --out=release-builds"
+  },
+  "dependencies": {
+    "electron": "^2.0.3",
+    "bluebird": "^3.5.1",
+    "bootstrap": "^4.0.0-beta.3",
+    "crypto-js": "^3.1.9-1",
+    "electron-settings": "^3.2.0",
+    "open-file-text-editor": "0.0.1",
+    "forms-js": "0.0.2",
+    "intro.js": "^2.9.3",
+    "jquery": "^3.3.1",
+    "morris.js": "github:morrisjs/morris.js",
+    "multichain-api": "^1.0.0-alpha.8",
+    "multichain-node": "^2.1.6-version1.0.2",
+    "popper.js": "^1.12.9",
+    "tether": "^1.4.0"
+  },
+  "standard": {
+    "globals": [
+      "$"
+    ]
+  }
+}

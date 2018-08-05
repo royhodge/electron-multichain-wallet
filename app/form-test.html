@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<style>
+    button,
+    label {
+        display: inline-block;
+    }
+</style>
+
+<h1>The world's simplest form</h1>
+<p>Commit new characters into the input field below to change the model's data</p>
+<form>
+    <label><input type="text" value="" name="first_name" /></label>
+    <button type="button">Change</button>
+</form>
+
+
+<p>The current model data is...</p>
+
+<code>
+
+</code>
+
+<script src="./assets/plugins/form.js"></script>
+
+<script>
+    var formEl = document.getElementsByTagName('form')[0];
+    var nameInput = formEl.getElementsByTagName('input')[0];
+    var code = document.getElementsByTagName('code')[0];
+    var model = {first_name: 'Joe'};
+    var form = new Form({
+        el: formEl,
+        data: model,
+        onChange: function () {
+            code.textContent = JSON.stringify(model);
+        }
+    });
+    // set up the form, prep the DOM, and inject preset value from model
+    form.setup();
+    code.textContent = JSON.stringify(model);
+</script>
+
+</body>
+</html>
